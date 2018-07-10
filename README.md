@@ -1,6 +1,7 @@
 # bubbo-theme
-=====================
-Bubbowrap 2018 theme, build with Wordpress/Twig/ACF.
+
+## About
+Bubbowrap 2018 theme, built with Wordpress/Twig/ACF. Wanted to build a theme from scratch and also make my site easier to update/make it easier to reskin in the future.
 
 ## Tech Stack
 
