@@ -1,15 +1,15 @@
 Proposed File Structure:
 
-↳ Theme . 
-  ↳ dist . 
-    ↳ images . 
-    ↳ css . 
-    ↳ js . 
-  ↳ assets . 
-    ↳ img . 
-    ↳ fonts . 
-    ↳ js . 
-    ↳ scss . 
-  ↳ functions . 
-  ↳ includes  
-  ↳ views . 
+↳ Theme <br />
+  ↳ dist <br />
+    ↳ images <br />
+    ↳ css <br />
+    ↳ js <br />
+  ↳ assets <br />
+    ↳ img <br />
+    ↳ fonts <br />
+    ↳ js <br />
+    ↳ scss <br />
+  ↳ functions <br />
+  ↳ includes <br />
+  ↳ views <br />
