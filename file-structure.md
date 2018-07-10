@@ -1,4 +1,4 @@
-Proposed File Structure:
+#### Proposed File Structure:
 
     Theme
     ├── dist
