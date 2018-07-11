@@ -5,7 +5,7 @@
     │   ├── img   
     │   ├── css         
     │   └── js  
-    ├── assets                   
+    ├── src                   
     │   ├── img          
     │   ├── fonts        
     │   ├── scss         
