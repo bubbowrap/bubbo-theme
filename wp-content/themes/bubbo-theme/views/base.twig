@@ -1,0 +1,14 @@
+
+{% include "global/doctype-meta.twig" %}
+    <body>
+    {% block header %}
+        {% include "header" %}
+    {% endblock %}
+    <main>
+    </main>
+    {% block footer %}
+        {% include "footer.twig" %}
+        {{ function('wp_footer') }}
+    {% endblock %}
+    </body>
+</html>
