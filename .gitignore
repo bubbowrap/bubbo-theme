@@ -51,9 +51,4 @@ license.txt
 !ajax/index.php
 !wp-content/uploads
 
-# Node
-node_modules
-npm-debug.log
-bower_compoonents/
-
 .htaccess
