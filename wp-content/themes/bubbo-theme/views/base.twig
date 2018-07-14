@@ -1,15 +1,12 @@
 {% include 'html-header.twig' %}
-{% block styles %}
-    <link rel="stylesheet" href="{{theme.path}}/dist/css/site.css" type="text/css" media="screen" />
-{% endblock %}
 
-	<body class="{{body_class}}">
+	<body class="{{body_class}}" data-template="base.twig">
 	{% block header %}
-		{% include 'headers/header.twig' %}
+		{% include 'header.twig' %}
 	{% endblock %}
 
 	{% block hero %}{% endblock %}
-
+	
 	{% block content %}
 		<section id="content" role="main" class="content-wrapper">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
@@ -26,7 +23,7 @@
 			
 
 		{% block footer %}
-			{% include 'footers/footer.twig' %}
+			{% include 'footer.twig' %}
 			{{ function('wp_footer') }}
 			{% block page_scripts %}{% endblock %}
 		{% endblock %}

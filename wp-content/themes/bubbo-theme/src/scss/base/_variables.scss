@@ -12,7 +12,7 @@ $color-dark: #1a1a1a;
 $font: 'Palanquin', Arial, sans-serif;
 
 @function rem($px) {
-    @return ($px/$font-size-base) + rem;
+    @return ($px/$font-size--base) + rem;
 }
 
 $font-size-base: 16; 
