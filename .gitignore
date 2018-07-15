@@ -51,7 +51,7 @@ license.txt
 !wp-content/uploads
 
 # Node
-node_modules
+node_modules/
 npm-debug.log
 
 .htaccess
