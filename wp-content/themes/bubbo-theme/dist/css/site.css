@@ -1,3 +1,6 @@
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -353,3 +356,129 @@ table {
 td,
 th {
   padding: 0; }
+
+.btn {
+  display: inline-block;
+  padding: 0.55556rem 0.88889rem;
+  font-weight: 700;
+  font-size: 0.77778rem;
+  color: white;
+  line-height: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-color: #1a1a1a;
+  background-image: none;
+  border: 0;
+  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase; }
+  .btn:hover, .btn:focus, .btn.focus {
+    text-decoration: none; }
+  .btn:active, .btn.active {
+    outline: 0; }
+  .btn[disabled] {
+    cursor: not-allowed;
+    opacity: 2 / 3; }
+  @media (min-width: 768px) {
+    .btn {
+      font-size: 0.72222rem;
+      white-space: inherit; } }
+  .btn--primary {
+    background-color: #d2322d; }
+
+html {
+  font-size: 18px;
+  line-height: 1.5em;
+  font-family: "Palanquin", Arial, sans-serif;
+  color: #777777;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  font-size: 3.05556rem/0.5; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3.05556rem; } }
+
+h2 {
+  font-size: 2.22222rem/0.5;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 300; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 2.22222rem; } }
+
+h3 {
+  margin-top: 3rem;
+  margin-bottom: 2rem; }
+
+h4 {
+  margin-top: 3rem;
+  margin-bottom: 2rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1rem 1fr 5fr 1fr 1rem;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  max-width: 72.22222rem;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: 3rem 1fr 5fr 1fr 3rem; } }
+
+.site-header {
+  grid-column: 1/-1;
+  background: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: -0.05556rem;
+  z-index: 1; }
+  .site-header__logo {
+    width: 3.88889rem;
+    padding: 0.27778rem;
+    opacity: .8; }
+    .site-header__logo:hover {
+      opacity: 1; }
+
+.site-nav {
+  display: flex;
+  align-content: flex-end; }
+  .site-nav__list {
+    list-style: none;
+    display: flex; }
+  .site-nav__item {
+    padding: 1rem; }
+
+.site-footer {
+  color: white;
+  background: #1a1a1a;
+  grid-column: 1/-1;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  padding: 4rem 0; }
+
+img {
+  max-width: 100%; }
+
+figure {
+  margin: 0; }
+
+body {
+  background: #eeeeee; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }

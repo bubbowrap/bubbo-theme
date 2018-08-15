@@ -1,0 +1,11 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1rem 1fr 5fr 1fr 1rem;
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+      max-width: rem(1300);
+      margin: 0 auto;
+      @media (min-width: $screen-md) {
+          grid-template-columns: 3rem 1fr 5fr 1fr 3rem;
+      }
+  }

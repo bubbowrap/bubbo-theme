@@ -1,0 +1,36 @@
+// ***************************************
+//
+//   Site Footer
+//
+// ***************************************
+
+.site-header {
+    grid-column: 1/-1;
+    background: $color-light;
+      //border-bottom: thin solid rgba(0,0,0,.1);
+      display: flex;
+      justify-content: space-between;
+      position: sticky;
+      top: rem(-1);
+      z-index: 1;
+      &__logo {
+          width: rem(70);
+          padding: rem(5);
+          opacity: .8;
+          &:hover {
+              opacity: 1;
+          }
+      }
+  }
+  
+  .site-nav {
+      display: flex;
+      align-content: flex-end;
+      &__list {
+          list-style: none;
+          display: flex;
+      }
+      &__item {
+          padding: 1rem;
+      }
+  }
