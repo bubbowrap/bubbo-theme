@@ -8,7 +8,7 @@
           list-style: none;
           padding: 0;
           margin: 0;
-              @media (min-width: $lg) {
+              @media (min-width: $screen-lg) {
                   grid-template-columns: 1fr 1fr;
               }
       }

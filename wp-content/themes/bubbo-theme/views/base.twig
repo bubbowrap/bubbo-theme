@@ -6,6 +6,7 @@
 	<body class="{{body_class}}">
 	{% block header %}
 		{% include 'headers/header.twig' %}
+			<div class="grid">
 	{% endblock %}
 
 	{% block hero %}{% endblock %}
@@ -24,10 +25,11 @@
 		</section>
 	{% endblock %}
 
-		{% block footer %}
-			{% include 'footers/footer.twig' %}
-			{{ function('wp_footer') }}
-			{% block page_scripts %}{% endblock %}
-		{% endblock %}
+	{% block footer %}
+		</div>
+		{% include 'footers/footer.twig' %}
+		{{ function('wp_footer') }}
+		{% block page_scripts %}{% endblock %}
+	{% endblock %}
 	</body>
 </html>

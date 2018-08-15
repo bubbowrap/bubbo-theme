@@ -6,6 +6,6 @@
       max-width: rem(1300);
       margin: 0 auto;
       @media (min-width: $screen-md) {
-          grid-template-columns: 5rem 1fr 5fr 1fr 5rem;
+          grid-template-columns: 3rem 1fr 5fr 1fr 3rem;
       }
   }

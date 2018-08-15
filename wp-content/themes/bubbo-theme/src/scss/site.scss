@@ -10,14 +10,9 @@ img {
 figure {
     margin: 0;
 }
-html {
-    font-family: sans-serif;
-}
 body {
-    font-size: $font-size-base;
     background: $color-light;
 }
-
 .sr-only {
     position: absolute;
     width: 1px;

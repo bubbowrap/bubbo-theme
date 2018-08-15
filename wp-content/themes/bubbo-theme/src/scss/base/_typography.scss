@@ -1,5 +1,35 @@
 //main
 
 //headings
+html {
+    font-size: $font-size-base + px;
+    line-height: $line-height + em;
+    font-family: $font-family-primary;
+    color: $color-primary;
+    font-weight: $font-normal;
+    -webkit-font-smoothing: antialiased;
+}
 
-//list
+h1 { 
+    font-size: $h1-font-size / .5;
+    @media (min-width: $screen-md) {
+        font-size: $h1-font-size;
+    }
+}
+h2 {
+    font-size: $h2-font-size / .5;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-weight: $font-light;
+    @media (min-width: $screen-md) {
+        font-size: $h2-font-size;
+    }
+}
+h3 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+h4 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
