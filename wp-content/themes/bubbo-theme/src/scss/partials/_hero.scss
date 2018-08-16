@@ -2,13 +2,40 @@
 	grid-column: 2 / 5;
     text-align: center;
 	padding: 3rem 0;
-	@media (min-width: $screen-md) {
-		padding: 6rem 0;
+	@media (min-width: $screen-xl) {
+		padding: 2rem 0 6rem;
 		grid-column: 3 / 4;
     }
     &__intro {
-        font-weight: 300;
-        font-size: rem(20);
-        line-height: 1.75;
+        font-weight: $font-normal;
+        @media (min-width: $screen-md) {
+            font-size: rem(20);
+            line-height: 1.75;
+        }
+    }
+    &__title {
+        font-size: 5vw;
+        @media (min-width: $screen-lg) {
+            font-size: $h1-font-size;
+        }
+        &:after {
+            content: '';
+            display: block;
+            height: rem(5);
+            margin: 1rem auto;
+            width: 5rem;
+            background: $color-secondary;
+        }
+    }
+    &__subtitle {
+        font-size:4rem;
+        font-size: 6vw;
+        text-transform: uppercase;
+        color: $color-dark-gray;
+        font-weight: $font-bold;
+        display: block;
+        @media (min-width: $screen-lg) {
+            font-size: 3.9rem;
+        }
     }
 }

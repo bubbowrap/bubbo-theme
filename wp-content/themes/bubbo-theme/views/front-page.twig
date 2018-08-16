@@ -6,11 +6,11 @@
 {% endblock %}
 
 {% block hero %}
-    <section class="hero">
-        <h1>Hey, I'm Jeremy Samuel + I'm a 
-            <span>Front-end Designer.</span>
+    <section class="hero hero--homepage">
+        <h1 class="hero__title">Hey, I'm Jeremy Samuel <span class="accent">+</span> I'm a 
+            <span class="hero__subtitle">Front-end Designer.</span>
         </h1>
-        <p class="hero__intro">I design + animate + code experiences for the web and mobile devices. Check out my Codepen to see what I'm working on, or my Twitter to see what I'm up to. I'm a pretty busy guy, but I'm always down to chat or take on freelance jobs that sound exciting.</p>
+        <p class="hero__intro">I design <span class="accent">+</span> animate <span class="accent">+</span> code experiences for the web and mobile devices. Check out my Codepen to see what I'm working on, or my Twitter to see what I'm up to. I'm a pretty busy guy, but I'm always down to chat or take on freelance jobs that sound exciting.</p>
     </section>
 {% endblock %}
 {% block content %}
@@ -72,10 +72,10 @@
             <p>At my core? I’m a learner. Whenever I see something cool I immediately need to know how it's done so that I can incorporate it into my own work.</p>
             <a href="#" class="btn btn--primary">View Resume</a>
         </div>
-        <div class="about__skills">
+        <div class="skills">
             <div>
                 <h3>UI + Design</h3>
-                <ul class="skills-list">
+                <ul class="skills__list">
                     <li>Wireframing</li>
                     <li>UX/UI Design</li>
                     <li>Sketch App</li>
@@ -89,7 +89,7 @@
             </div>
             <div>
                 <h3>Development</h3>
-                <ul class="skills-list">
+                <ul class="skills__list">
                     <li>HTML / HTML5</li>
                     <li>CSS3 / SASS</li>
                     <li>Javascript / JQuery</li>
@@ -103,7 +103,7 @@
             </div>
             <div>
                 <h3>Motion</h3>
-                <ul class="skills-list">
+                <ul class="skills__list">
                     <li>Interaction Design</li>
                     <li>CSS3 Animation</li>
                     <li>After Effects</li>

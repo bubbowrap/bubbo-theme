@@ -2,14 +2,38 @@
   grid-column: 2 / 5;
   text-align: center;
   padding: 3rem 0; }
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     .hero {
-      padding: 6rem 0;
+      padding: 2rem 0 6rem;
       grid-column: 3 / 4; } }
   .hero__intro {
-    font-weight: 300;
-    font-size: 1.11111rem;
-    line-height: 1.75; }
+    font-weight: 400; }
+    @media (min-width: 768px) {
+      .hero__intro {
+        font-size: 1.11111rem;
+        line-height: 1.75; } }
+  .hero__title {
+    font-size: 5vw; }
+    @media (min-width: 1024px) {
+      .hero__title {
+        font-size: 3.05556rem; } }
+    .hero__title:after {
+      content: '';
+      display: block;
+      height: 0.27778rem;
+      margin: 1rem auto;
+      width: 5rem;
+      background: #d2322d; }
+  .hero__subtitle {
+    font-size: 4rem;
+    font-size: 6vw;
+    text-transform: uppercase;
+    color: #444444;
+    font-weight: 700;
+    display: block; }
+    @media (min-width: 1024px) {
+      .hero__subtitle {
+        font-size: 3.9rem; } }
 
 .portfolio {
   grid-column: 2/span 3; }
@@ -43,7 +67,6 @@
         transform: scale(1.05);
         transition: .2s ease-in-out; }
   .portfolio__img {
-    max-width: 100%;
     display: block;
     opacity: 1;
     transition: .2s ease-in-out; }
@@ -65,29 +88,30 @@
 
 .about {
   display: grid;
-  grid-column: 1/-1;
+  grid-column: 2/span 3;
   padding: 2rem 0;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  grid-column-gap: 3rem; }
   @media (min-width: 1024px) {
     .about {
-      grid-column: 2/span 4;
       padding: 6rem 0;
-      grid-template-columns: 5fr 7fr; } }
+      grid-template-columns: 4fr 7fr; } }
+  @media (min-width: 1200px) {
+    .about {
+      grid-column-gap: 5rem; } }
   .about__title {
-    margin: 0; }
-  .about__summary {
-    padding: 2rem; }
-  .about__skills {
+    margin-top: 2rem; }
+  .about .skills {
     display: grid;
-    padding: 2rem; }
+    grid-column-gap: 1rem; }
     @media (min-width: 480px) {
-      .about__skills {
+      .about .skills {
         grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 768px) {
-      .about__skills {
+      .about .skills {
         grid-template-columns: repeat(3, 1fr); } }
-  .about .skills-list {
-    padding: 0 1rem;
-    font-size: 0.88889rem;
-    line-height: 1.75;
-    font-weight: 300; }
+    .about .skills__list {
+      padding: 0 1rem;
+      font-size: 0.88889rem;
+      line-height: 1.75;
+      font-weight: 300; }
