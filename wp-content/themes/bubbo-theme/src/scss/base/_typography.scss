@@ -1,4 +1,7 @@
 //main
+p {
+    margin: 0 0 1rem;
+}
 
 //headings
 html {
@@ -12,6 +15,8 @@ html {
 
 h1 { 
     font-size: $h1-font-size / .5;
+    line-height: 1;
+    font-weight: $font-normal;
     @media (min-width: $screen-md) {
         font-size: $h1-font-size;
     }
@@ -20,16 +25,32 @@ h2 {
     font-size: $h2-font-size / .5;
     margin-top: 4rem;
     margin-bottom: 2rem;
-    font-weight: $font-light;
+    font-weight: $font-normal;
+    line-height: 1.1em;
     @media (min-width: $screen-md) {
         font-size: $h2-font-size;
     }
 }
 h3 {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    font-size: $h3-font-size / .5;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: $font-normal;
+    @media (min-width: $screen-md) {
+        font-size: $h3-font-size;
+    }
 }
 h4 {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+//list 
+ul, menu, dir {
+    margin: 0;
+}
+//misc
+
+.accent {
+    color: $color-secondary;
 }

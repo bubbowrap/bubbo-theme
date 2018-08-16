@@ -1,23 +1,24 @@
 <header class="site-header">
+    <div class="container">
+        <a href="/" class="site-header__logo" rel="home">
+                <img onerror="http://www.bubbowrap.com/wp-content/themes/bubbowrap-v5/images/jsamuel-logo-2017-dark.png" src="http://www.bubbowrap.com/wp-content/themes/bubbowrap-v5/images/jsamuel-logo-2017-dark.svg" alt="Jeremy Samuel - Front-end Designer" scale="0">
+                
+            </a>
+        <nav class="site-nav" role="navigation">
+            <ul class="site-nav__list">
+                        {% for item in menu.get_items %} {% endfor %}
 
-    <a href="/" class="site-header__logo" rel="home">
-            <img onerror="http://www.bubbowrap.com/wp-content/themes/bubbowrap-v5/images/jsamuel-logo-2017-dark.png" src="http://www.bubbowrap.com/wp-content/themes/bubbowrap-v5/images/jsamuel-logo-2017-dark.svg" alt="Jeremy Samuel - Front-end Designer" scale="0">
-            
-        </a>
-    <nav class="site-nav" role="navigation">
-        <ul class="site-nav__list">
-                    {% for item in menu.get_items %} {% endfor %}
-
-            <li class="site-nav__item">
-                <a href="{{item.get_link}}">{{item.title}}</a>
-            </li>
-            <li class="site-nav__item">
-                <a href="#">Item 2</a>
-            </li>
-            <li class="site-nav__item">
-                <a href="#">Item 3</a>
-            </li>
-            
-        </ul>
-    </nav>
+                <li class="site-nav__item">
+                    <a href="{{item.get_link}}">{{item.title}}</a>
+                </li>
+                <li class="site-nav__item">
+                    <a href="#">Item 2</a>
+                </li>
+                <li class="site-nav__item">
+                    <a href="#">Item 3</a>
+                </li>
+                
+            </ul>
+        </nav>
+    </div>
 </header>

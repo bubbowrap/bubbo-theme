@@ -7,3 +7,8 @@ gulp.task('sass', function() {
     .pipe(sass())
     .pipe(gulp.dest('wp-content/themes/bubbo-theme/dist/css/'))
 });
+
+//compile on save
+gulp.task('watch', function() {
+    gulp.watch('wp-content/themes/bubbo-theme/src/scss/**/*.scss', ['sass']);
+});
