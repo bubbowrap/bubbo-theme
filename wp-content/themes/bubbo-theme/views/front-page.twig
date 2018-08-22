@@ -6,26 +6,37 @@
 {% endblock %}
 
 {% block hero %}
-    <section class="hero hero--homepage">
+    <section class="hero--homepage">
+    			<div class="grid container">
+        <div class="hero__block">
         <h1 class="hero__title">Hey, I'm Jeremy Samuel <span class="accent">+</span> I'm a 
             <span class="hero__subtitle">Front-end Designer.</span>
         </h1>
-        <p class="hero__intro">I design <span class="accent">+</span> animate <span class="accent">+</span> code experiences for the web and mobile devices. Check out my Codepen to see what I'm working on, or my Twitter to see what I'm up to. I'm a pretty busy guy, but I'm always down to chat or take on freelance jobs that sound exciting.</p>
+        <p class="hero__intro">{{ post.content }}</p>
+    </div>
+    </div>
     </section>
+
 {% endblock %}
 {% block content %}
+
     <section class="portfolio">
         <ul class="portfolio__list">
+ 
+           {% for item in portfolio %}
             <li class="portfolio__item">
-
                 <figure>
-                    <a href="#">
-                        <img class="portfolio__img" src="http://www.bubbowrap.com/wp-content/uploads/2016/11/crevo-port-img.jpg" alt="Crevo Footwear" />
-                        <figcaption class="portfolio__title">Title Text <span class="portfolio__tag">Tag Text</span></figcaption>
+                    <a href="{{ item.link }}">
+                        <img class="portfolio__img" src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}" />
+                        <figcaption class="portfolio__title">
+                            {{ item.title }}
+                            <span class="portfolio__tag">{{ item.terms('portfolio-category')[0] }}</span>
+                        </figcaption>
                     </a>
-
                 </figure>
             </li>
+            {% endfor %}
+
             <li class="portfolio__item">
                 <figure>
 
@@ -68,52 +79,12 @@
     </section>
     <section class="about">
         <div class="about__summary">
-            <h2 class="about__title">I Have a Diverse Set of Design Skills.</h2>
-            <p>At my core? I’m a learner. Whenever I see something cool I immediately need to know how it's done so that I can incorporate it into my own work.</p>
+            <h2 class="about__title">{{ post.about_title }}</h2>
+            <p>{{ post.about_summary }}</p>
             <a href="#" class="btn btn--primary">View Resume</a>
         </div>
         <div class="skills">
-            <div>
-                <h3>UI + Design</h3>
-                <ul class="skills__list">
-                    <li>Wireframing</li>
-                    <li>UX/UI Design</li>
-                    <li>Sketch App</li>
-                    <li>Photoshop</li>
-                    <li>Illustrator</li>
-                    <li>Typography</li>
-                    <li>Color Theory</li>
-                    <li>Illustration</li>
-                    <li>Image Editing / Retouching</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Development</h3>
-                <ul class="skills__list">
-                    <li>HTML / HTML5</li>
-                    <li>CSS3 / SASS</li>
-                    <li>Javascript / JQuery</li>
-                    <li>Gulp</li>
-                    <li>Version Control (Git)</li>
-                    <li>Twitter Bootstrap</li>
-                    <li>Wordpress</li>
-                    <li>Responsive / Mobile First</li>
-                    <li>Cross Platform / Browser</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Motion</h3>
-                <ul class="skills__list">
-                    <li>Interaction Design</li>
-                    <li>CSS3 Animation</li>
-                    <li>After Effects</li>
-                    <li>2D/3D Motion Graphics</li>
-                    <li>Flash Animation</li>
-                    <li>Character Animation</li>
-                    <li>Video Editing</li>
-                    <li>Audio Editing</li>
-                </ul>
-            </div>
+            {{ post.about_skills }}
         </div>
     </section>
 {% endblock %}

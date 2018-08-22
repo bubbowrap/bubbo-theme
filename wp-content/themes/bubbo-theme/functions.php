@@ -23,11 +23,52 @@ class StarterSite extends TimberSite {
 	}
 
 	function register_post_types() {
-		//this is where you can register custom post types
+		// Portfolio
+		$labels = array(
+			'name'          => _x( 'Portfolio', 'post type general name' ),
+			'singular_name' => _x( 'Portfolio', 'post type singular name' ),
+			'add_new' 		=> _x( 'Add New', 'Item' ),
+			'add_new_item'  => __( 'Add New Portfolio Item' ),
+			'edit_item'     => __( 'Edit Portfolio Item' ),
+			'new_item'      => __( 'New Portfolio Item' ),
+			'all_items'     => __( 'All Portfolio Items' ),
+			'view_item'     => __( 'View Portfolio Item' ),
+			'search_items'  => __( 'Search Portfolio Items' ),
+			'not_found'     => __( 'No Portfolio Items found' ),
+			'not_found_in_trash' => __( 'No Portfolio Items found in the Trash' ),
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Portfolio'
+		);
+		$args = array(
+			'labels'        => $labels,
+			'description'   => 'Individual Portfolio Item Data',
+			'public'        => true,
+			'menu_icon'     => 'dashicons-book',
+			'menu_position' => 3,
+			'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt'),
+			'has_archive'   => false,
+			'rewrite'       => array( 'with_front' => false ),
+		);
+		register_post_type( 'portfolio', $args );	
 	}
 
 	function register_taxonomies() {
-		//this is where you can register custom taxonomies
+    // Custom Portfolio Categories
+    register_taxonomy(
+        'portfolio-category',
+        'portfolio',
+        array(
+            'public' => false,
+            'hierarchical' => true,
+            'labels' => array(
+                'name' => 'Portfolio Categories',
+                'singular_name' => 'Portfolio Category',
+                'add_new_item' => 'Create Portfolio Category',
+            ),
+            'show_ui' => true,
+            'show_admin_column' => true,
+        )
+    );
 	}
 
 	function add_to_context( $context ) {
