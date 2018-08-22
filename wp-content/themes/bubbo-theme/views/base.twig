@@ -1,35 +1,44 @@
-{% include 'html-header.twig' %}
-{% block styles %}
-    <link rel="stylesheet" href="{{theme.path}}/dist/css/site.css" type="text/css" media="screen" />
-{% endblock %}
+{% include 'html-header.twig' %} {% block styles %}
+<link rel="stylesheet" href="{{theme.path}}/dist/css/site.css" type="text/css" media="screen" /> {% endblock %}
 
-	<body class="{{body_class}}">
-	{% block header %}
-		{% include 'headers/header.twig' %}
-			<div class="grid container">
+<body class="{{body_class}}">
+	{% block header %} 
+		{% include 'headers/header.twig' %} 
+	{% endblock %} 
+	
+	{% block hero %}
+    <section class="hero">
+    	<div class="grid container">
+        <div class="hero__block">
+        	<h1>{{post.title}}</h1>
+        	<p class="hero__intro">I design <span class="accent">+</span> animate <span class="accent">+</span> code experiences for the web and mobile devices. Check out my Codepen to see what I'm working on, or my Twitter to see what I'm up to. I'm a pretty busy guy, but I'm always down to chat or take on freelance jobs that sound exciting.</p>
+    	</div>
+    	</div>
+    </section>
 	{% endblock %}
 
-	{% block hero %}{% endblock %}
-	
-	{% block content %}
+	<div class="grid container">
+		{% block content %}
 		<section id="content" role="main" class="content-wrapper">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
+			{% if title %}
+				<h1>{{title}}</h1>
+			{% endif %}
 			<div class="wrapper {{sidebar_class}}">
-			Sorry, no content
-			{% if sidebar %}
+				Sorry, no content {% if sidebar %}
 				<aside class="layout-sidebar">
 					{{sidebar}}
 				</aside>
-			{% endif %}
+				{% endif %}
 			</div>
 		</section>
-	{% endblock %}
+		{% endblock %}
+	</div>
 
-	{% block footer %}
-		</div>
-		{% include 'footers/footer.twig' %}
-		{{ function('wp_footer') }}
+	{% block footer %} 
+		{% include 'footers/footer.twig' %} 
+		{{ function('wp_footer') }} 
 		{% block page_scripts %}{% endblock %}
 	{% endblock %}
-	</body>
+</body>
+
 </html>

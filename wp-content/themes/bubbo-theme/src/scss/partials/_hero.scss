@@ -1,10 +1,12 @@
 .hero {
+    &__block {
 	grid-column: 2 / 5;
     text-align: center;
 	padding: 3rem 0;
-	@media (min-width: $screen-xl) {
-		padding: 2rem 0 6rem;
-		grid-column: 3 / 4;
+        @media (min-width: $screen-xl) {
+            padding: 2rem 0 6rem;
+            grid-column: 3 / 4;
+        }
     }
     &__intro {
         font-weight: $font-normal;

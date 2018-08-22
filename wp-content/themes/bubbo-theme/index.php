@@ -10,9 +10,11 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 $context = Timber::get_context();
 $context['posts'] = Timber::get_posts();
-$context['foo'] = 'bar';
+
 $templates = array( 'index.twig' );
 if ( is_home() ) {
+	
+	//add homepage file if home
 	array_unshift( $templates, 'front-page.twig' );
 }
 Timber::render( $templates, $context );
