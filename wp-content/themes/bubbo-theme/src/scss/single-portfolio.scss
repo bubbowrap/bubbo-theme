@@ -1,0 +1,60 @@
+@import "base/variables";
+@import "partials/hero";
+@import "partials/portfolio-grid";
+
+@import "lib/flickity";
+
+// ***************************************
+//
+//   Single Portfolio Page
+//
+// ***************************************
+
+.hero {
+	&__title {
+		margin-bottom: 0;
+	}
+	&__category {
+		text-transform: uppercase;
+		color: $color-dark;
+		letter-spacing: $letter-spacing;
+		font-weight: $font-bold;
+	}
+}
+// ***************************************
+//   Section
+// ***************************************
+
+.project-info {
+	display: grid;
+	grid-column: 1/ -1;
+	padding: 2rem 0;
+	grid-template-columns: 1fr;
+	grid-column-gap: 3rem;
+	@media (min-width: $screen-lg) {
+		padding: 6rem 0;
+		grid-template-columns:4fr 7fr;
+	}
+	@media (min-width: $screen-xl) {
+		grid-column-gap: 5rem;
+	}
+}
+
+.project-specs {
+	&__title {
+		text-transform: uppercase;
+		border-bottom: 2px solid $color-dark;
+		font-weight: $font-bold;
+		display: inline-block;
+	}
+}
+// ***************************************
+//   Page Navigation
+// ***************************************
+
+.page-nav {
+	grid-column: 1/-1;
+	text-align: center;
+	padding: 6rem 0;
+	border-top: thin solid $color-primary;
+}

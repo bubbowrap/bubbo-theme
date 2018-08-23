@@ -391,6 +391,10 @@ th {
     background-color: #d2322d; }
     .btn--primary:hover {
       background-color: #ec1a14; }
+  .btn--secondary {
+    background-color: #444444; }
+    .btn--secondary:hover {
+      background-color: #111111; }
 
 p {
   margin: 0 0 1rem; }

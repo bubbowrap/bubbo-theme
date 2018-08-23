@@ -43,4 +43,10 @@
             background-color: saturate($color-secondary, 20%);
         }
     }
+    &--secondary {
+        background-color: $color-dark-gray;
+        &:hover {
+            background-color: darken($color-dark-gray, 20%);
+        }
+    }
 }

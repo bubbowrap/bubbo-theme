@@ -1,5 +1,7 @@
-{% include 'html-header.twig' %} {% block styles %}
-<link rel="stylesheet" href="{{theme.path}}/dist/css/site.css" type="text/css" media="screen" /> {% endblock %}
+{% include 'html-header.twig' %} 
+{% block styles %}
+	<link rel="stylesheet" href="{{theme.path}}/dist/css/site.css" type="text/css" media="screen" /> 
+{% endblock %}
 
 <body class="{{body_class}}">
 	{% block header %} 
@@ -16,6 +18,8 @@
     	</div>
     </section>
 	{% endblock %}
+
+	{% block media %}{% endblock %}
 
 	<div class="grid container">
 		{% block content %}
@@ -34,10 +38,19 @@
 		{% endblock %}
 	</div>
 
+	{% block page_navigation %}{% endblock %}
+
 	{% block footer %} 
 		{% include 'footers/footer.twig' %} 
 		{{ function('wp_footer') }} 
-		{% block page_scripts %}{% endblock %}
+		{% block page_scripts %}
+			<script
+	src="https://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	crossorigin="anonymous"></script>
+		{% endblock %}
+		{% block fonts %}{% endblock %}
+
 	{% endblock %}
 </body>
 
