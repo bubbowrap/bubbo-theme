@@ -20,7 +20,7 @@
 {% endblock %}
 {% block content %}
 
-    <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <ul class="portfolio__list">
  
            {% for item in portfolio %}
@@ -77,7 +77,7 @@
         <!--<a href="#">Other Experiments</a> 
         In case you're curious.-->
     </section>
-    <section class="about">
+    <section id="about" class="about">
         <div class="about__summary">
             <h2 class="about__title">{{ post.about_title }}</h2>
             <p>{{ post.about_summary }}</p>
