@@ -408,6 +408,7 @@ html {
   -webkit-font-smoothing: antialiased; }
 
 h1 {
+  color: #444444;
   font-size: 3.05556rem/0.5;
   line-height: 1;
   font-weight: 400; }
@@ -416,6 +417,7 @@ h1 {
       font-size: 3.05556rem; } }
 
 h2 {
+  color: #444444;
   font-size: 2.22222rem/0.5;
   margin-top: 4rem;
   margin-bottom: 2rem;
@@ -426,6 +428,7 @@ h2 {
       font-size: 2.22222rem; } }
 
 h3 {
+  color: #444444;
   font-size: 1.55556rem/0.5;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -435,6 +438,7 @@ h3 {
       font-size: 1.55556rem; } }
 
 h4 {
+  color: #444444;
   margin-top: 2rem;
   margin-bottom: 1rem; }
 
@@ -492,7 +496,8 @@ ul, menu, dir {
   text-align: center;
   padding: 4rem 0; }
   .site-footer__title {
-    margin: 1rem 0; }
+    margin: 1rem 0;
+    color: #eeeeee; }
   .site-footer__contact {
     list-style: none;
     padding: 0;
