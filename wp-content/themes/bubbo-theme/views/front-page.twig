@@ -9,7 +9,7 @@
     <section class="hero--homepage">
     			<div class="grid container">
         <div class="hero__block">
-        <h1 class="hero__title">Hey, I'm Jeremy Samuel <span class="accent">+</span> I'm a 
+            <h1 class="hero__title--underline">Hey, I'm Jeremy Samuel <span class="accent">+</span> I'm a 
             <span class="hero__subtitle">Front-end Designer.</span>
         </h1>
         <p class="hero__intro">{{ post.content }}</p>
@@ -30,7 +30,7 @@
                         <img class="portfolio__img" src="{{ item.thumbnail.src }}" alt="{{ item.thumbnail.alt }}" />
                         <figcaption class="portfolio__title">
                             {{ item.title }}
-                            <span class="portfolio__tag">{{ item.terms('portfolio-category')[0] }}</span>
+                            <span class="portfolio__tag">{{ item.terms('portfolio-category') | join(' / ') }}</span>
                         </figcaption>
                     </a>
                 </figure>

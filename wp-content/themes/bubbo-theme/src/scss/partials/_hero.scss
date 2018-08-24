@@ -20,20 +20,22 @@
         @media (min-width: $screen-lg) {
             font-size: $h1-font-size;
         }
-        &:after {
-            content: '';
-            display: block;
-            height: rem(5);
-            margin: 1rem auto;
-            width: 5rem;
-            background: $color-secondary;
+        &--underline {
+            &:after {
+                content: '';
+                display: block;
+                height: rem(5);
+                margin: 1rem auto;
+                width: 5rem;
+                background: $color-secondary;
+            }
         }
     }
     &__subtitle {
         font-size:4rem;
         font-size: 6vw;
-        text-transform: uppercase;
         color: $color-dark-gray;
+        text-transform: uppercase;
         font-weight: $font-bold;
         display: block;
         @media (min-width: $screen-lg) {

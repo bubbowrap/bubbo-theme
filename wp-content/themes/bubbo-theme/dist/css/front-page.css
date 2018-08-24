@@ -19,7 +19,7 @@
   @media (min-width: 1024px) {
     .hero__title {
       font-size: 3.05556rem; } }
-  .hero__title:after {
+  .hero__title--underline:after {
     content: '';
     display: block;
     height: 0.27778rem;
@@ -30,8 +30,8 @@
 .hero__subtitle {
   font-size: 4rem;
   font-size: 6vw;
-  text-transform: uppercase;
   color: #444444;
+  text-transform: uppercase;
   font-weight: 700;
   display: block; }
   @media (min-width: 1024px) {
@@ -88,6 +88,9 @@
     font-size: 1rem;
     display: block;
     font-weight: 100; }
+
+.hero__title--underline {
+  color: #777777; }
 
 .about {
   display: grid;

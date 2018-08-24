@@ -11,16 +11,29 @@
 // ***************************************
 
 .hero {
+	&__block {
+		grid-column: 2/span 3;
+		padding: 2rem 0;
+		.hero--portfolio & {
+			text-align: inherit;
+			display: grid;
+			grid-template-columns: 10fr auto;
+			align-items: center;
+		}
+	}
 	&__title {
-		margin-bottom: 0;
+		margin: 0;
 	}
 	&__category {
 		text-transform: uppercase;
-		color: $color-dark;
+		color: $color-primary;
 		letter-spacing: $letter-spacing;
 		font-weight: $font-bold;
+		font-size: rem(20);
+		padding: .25rem;
 	}
 }
+
 // ***************************************
 //   Section
 // ***************************************
@@ -33,7 +46,7 @@
 	grid-column-gap: 3rem;
 	@media (min-width: $screen-lg) {
 		padding: 6rem 0;
-		grid-template-columns:4fr 7fr;
+		grid-template-columns:7fr 4fr;
 	}
 	@media (min-width: $screen-xl) {
 		grid-column-gap: 5rem;
@@ -41,11 +54,24 @@
 }
 
 .project-specs {
+	&__item {
+		margin-bottom: 2rem;
+	}
 	&__title {
 		text-transform: uppercase;
-		border-bottom: 2px solid $color-dark;
+		margin: 0;
 		font-weight: $font-bold;
 		display: inline-block;
+		letter-spacing: $letter-spacing;
+	}
+	&__content {
+		margin: 0;
+	}
+}
+
+.project-details {
+	&__title {
+		margin-top: 0;
 	}
 }
 // ***************************************

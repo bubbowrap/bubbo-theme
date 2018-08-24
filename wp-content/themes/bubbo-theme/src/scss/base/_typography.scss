@@ -14,6 +14,7 @@ html {
 }
 
 h1 { 
+    color: $color-dark-gray;
     font-size: $h1-font-size / .5;
     line-height: 1;
     font-weight: $font-normal;
@@ -22,6 +23,7 @@ h1 {
     }
 }
 h2 {
+    color: $color-dark-gray;
     font-size: $h2-font-size / .5;
     margin-top: 4rem;
     margin-bottom: 2rem;
@@ -32,6 +34,7 @@ h2 {
     }
 }
 h3 {
+    color: $color-dark-gray;
     font-size: $h3-font-size / .5;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -41,6 +44,7 @@ h3 {
     }
 }
 h4 {
+    color: $color-dark-gray;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }

@@ -19,7 +19,7 @@
   @media (min-width: 1024px) {
     .hero__title {
       font-size: 3.05556rem; } }
-  .hero__title:after {
+  .hero__title--underline:after {
     content: '';
     display: block;
     height: 0.27778rem;
@@ -30,8 +30,8 @@
 .hero__subtitle {
   font-size: 4rem;
   font-size: 6vw;
-  text-transform: uppercase;
   color: #444444;
+  text-transform: uppercase;
   font-weight: 700;
   display: block; }
   @media (min-width: 1024px) {
@@ -194,14 +194,25 @@ https://flickity.metafizzy.co
   .flickity-rtl .flickity-page-dots {
     direction: rtl; }
 
+.hero__block {
+  grid-column: 2/span 3;
+  padding: 2rem 0; }
+  .hero--portfolio .hero__block {
+    text-align: inherit;
+    display: grid;
+    grid-template-columns: 10fr auto;
+    align-items: center; }
+
 .hero__title {
-  margin-bottom: 0; }
+  margin: 0; }
 
 .hero__category {
   text-transform: uppercase;
-  color: #1a1a1a;
+  color: #777777;
   letter-spacing: 0.05556rem;
-  font-weight: 700; }
+  font-weight: 700;
+  font-size: 1.11111rem;
+  padding: .25rem; }
 
 .project-info {
   display: grid;
@@ -212,16 +223,26 @@ https://flickity.metafizzy.co
   @media (min-width: 1024px) {
     .project-info {
       padding: 6rem 0;
-      grid-template-columns: 4fr 7fr; } }
+      grid-template-columns: 7fr 4fr; } }
   @media (min-width: 1200px) {
     .project-info {
       grid-column-gap: 5rem; } }
 
+.project-specs__item {
+  margin-bottom: 2rem; }
+
 .project-specs__title {
   text-transform: uppercase;
-  border-bottom: 2px solid #1a1a1a;
+  margin: 0;
   font-weight: 700;
-  display: inline-block; }
+  display: inline-block;
+  letter-spacing: 0.05556rem; }
+
+.project-specs__content {
+  margin: 0; }
+
+.project-details__title {
+  margin-top: 0; }
 
 .page-nav {
   grid-column: 1/-1;
