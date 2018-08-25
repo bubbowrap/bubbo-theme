@@ -1,4 +1,5 @@
 {% extends "base.twig" %}
+{% set file = TimberImage(post.resume_link) %}
 
 {% block styles %} {# append #}
     {{ parent() }}
@@ -6,13 +7,13 @@
 {% endblock %}
 
 {% block hero %}
-    <section class="hero--homepage">
+    <section id="hero-home" class="hero--homepage">
     			<div class="grid container">
         <div class="hero__block">
-            <h1 class="hero__title--underline">Hey, I'm Jeremy Samuel <span class="accent">+</span> I'm a 
+            <h1 class="hero__title hero__title--underline">Hey, I'm Jeremy Samuel <span class="accent">+</span> I'm a 
             <span class="hero__subtitle">Front-end Designer.</span>
         </h1>
-        <p class="hero__intro">{{ post.content }}</p>
+        <p class="hero__intro">{{ post.content|striptags('<span><a>') }}</p>
     </div>
     </div>
     </section>
@@ -20,7 +21,7 @@
 {% endblock %}
 {% block content %}
 
-    <section id="portfolio" class="portfolio">
+    <section id="work" class="portfolio">
         <ul class="portfolio__list">
  
            {% for item in portfolio %}
@@ -81,10 +82,16 @@
         <div class="about__summary">
             <h2 class="about__title">{{ post.about_title }}</h2>
             <p>{{ post.about_summary }}</p>
-            <a href="#" class="btn btn--primary">View Resume</a>
+            <a href="{{ file.src}}" class="btn btn--primary">View Resume</a>
         </div>
         <div class="skills">
             {{ post.about_skills }}
         </div>
     </section>
+{% endblock %}
+
+{% block page_scripts %}
+    {{ parent() }}
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript" src="{{site.theme.path}}/src/js/front-page.js"></script>
 {% endblock %}

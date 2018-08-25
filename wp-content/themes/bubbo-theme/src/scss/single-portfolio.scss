@@ -15,10 +15,12 @@
 		grid-column: 2/span 3;
 		padding: 2rem 0;
 		.hero--portfolio & {
-			text-align: inherit;
 			display: grid;
-			grid-template-columns: 10fr auto;
 			align-items: center;
+			@media (min-width: $screen-md) {
+				text-align: inherit;
+				grid-template-columns: 10fr auto;
+			}
 		}
 	}
 	&__title {
@@ -29,8 +31,14 @@
 		color: $color-primary;
 		letter-spacing: $letter-spacing;
 		font-weight: $font-bold;
-		font-size: rem(20);
+		font-size: rem(16);
 		padding: .25rem;
+		@media (min-width: $screen-md) {
+			font-size: 2vw;
+		}
+		@media (min-width: $screen-lg) {
+			font-size: rem(20);
+		}
 	}
 }
 
@@ -40,8 +48,8 @@
 
 .project-info {
 	display: grid;
-	grid-column: 1/ -1;
 	padding: 2rem 0;
+	grid-column: 2/span 3;
 	grid-template-columns: 1fr;
 	grid-column-gap: 3rem;
 	@media (min-width: $screen-lg) {
@@ -70,8 +78,13 @@
 }
 
 .project-details {
-	&__title {
-		margin-top: 0;
+	&__title {  
+		//font-weight: $font-bold;
+		//text-transform: uppercase;
+		@media (min-width: $screen-lg) {
+			margin-top: 0;
+			line-height: inherit;
+		}
 	}
 }
 // ***************************************
@@ -79,8 +92,11 @@
 // ***************************************
 
 .page-nav {
-	grid-column: 1/-1;
+	grid-column: 2/span 3;
 	text-align: center;
-	padding: 6rem 0;
+	padding: 4rem 0;
 	border-top: thin solid $color-primary;
+	@media (min-width: $screen-lg) {
+		padding: 6rem 0;
+	}
 }

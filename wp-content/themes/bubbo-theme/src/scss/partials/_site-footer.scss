@@ -12,7 +12,10 @@
     align-items: center;
     justify-items: center;
     text-align: center;
-    padding: 4rem 0;
+    padding: 2rem 0;
+    @media (min-width: $screen-md) {
+        padding: 4rem 0;
+    }
     &__title {
         margin: 1rem 0;
         color: $color-light;
@@ -20,7 +23,6 @@
     &__contact {
         list-style: none;
         padding: 0;
-        margin-bottom: .5rem;
     }
     &__social {
         list-style: none;
@@ -28,6 +30,19 @@
     }
     &__social-ico {
         display: inline-block;
+        svg {
+            color: white;
+            line-height: 1;
+            opacity: .65;
+            transition: $animation-basic;
+            padding: .5rem;
+            box-sizing: content-box;
+            display: block;
+            &:hover {
+                opacity: 1;
+                transition: $animation-basic;
+            }
+        }
     }
     &__copyright {
         font-size: rem(14);

@@ -9,16 +9,14 @@
     <section class="hero hero--portfolio">
     	<div class="grid container">
 			<div class="hero__block">
-			<div>
-				<h1 class="hero__title">{{post.title}}</h1>
-				<p class="hero__category">{{post.terms('portfolio-category') | join(', ') }}</p>
+				<div>
+					<h1 class="hero__title">{{post.title}}</h1>
+					<p class="hero__category">{{post.terms('portfolio-category') | join(', ') }}</p>
+				</div>
+				<div>
+					<a href="http://{{post.site_address}}" class="btn btn--secondary">Visit Site</a>
+				</div>
 			</div>
-						<div>
-
-			<a href="http://{{post.site_address}}" class="btn btn--secondary">Visit Site</a>
-			</div>
-						</div>
-
     	</div>
     </section>
 {% endblock %}

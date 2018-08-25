@@ -374,14 +374,16 @@ th {
   white-space: nowrap;
   text-decoration: none;
   border-radius: 5px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: all 0.2s ease; }
   @media (min-width: 768px) {
     .btn {
       font-size: 0.88889rem;
       white-space: inherit; } }
   .btn:hover, .btn:focus, .btn.focus {
     text-decoration: none;
-    background-color: #343434; }
+    background-color: #343434;
+    transition: all 0.2s ease; }
   .btn:active, .btn.active {
     outline: 0; }
   .btn[disabled] {
@@ -390,14 +392,23 @@ th {
   .btn--primary {
     background-color: #d2322d; }
     .btn--primary:hover {
-      background-color: #ec1a14; }
+      background-color: #ec1a14;
+      color: white; }
   .btn--secondary {
     background-color: #444444; }
     .btn--secondary:hover {
-      background-color: #111111; }
+      background-color: #111111;
+      color: white; }
 
 p {
   margin: 0 0 1rem; }
+
+a {
+  color: #d2322d;
+  transition: all 0.2s ease; }
+  a:hover {
+    color: #ec1a14;
+    transition: all 0.2s ease; }
 
 html {
   font-size: 18px;
@@ -455,36 +466,72 @@ ul, menu, dir {
 .grid {
   display: grid;
   grid-template-columns: 1rem 1fr 6fr 1fr 1rem;
-  grid-template-rows: auto;
-  grid-gap: 1rem; }
+  grid-template-rows: auto; }
   @media (min-width: 768px) {
     .grid {
+      grid-gap: 1rem;
       grid-template-columns: 3rem 1fr 6fr 1fr 3rem; } }
 
 .site-header {
-  background: #eeeeee;
-  position: sticky;
-  top: -0.05556rem;
-  z-index: 1; }
+  transition: all .3s ease; }
   .site-header__logo {
     width: 3.88889rem;
     padding: 0.27778rem;
-    opacity: .8; }
+    opacity: .8;
+    display: none; }
     .site-header__logo:hover {
       opacity: 1; }
+    @media (min-width: 321px) {
+      .site-header__logo {
+        display: block; } }
   .site-header .container {
     grid-column: 1/-1;
     display: flex;
     justify-content: space-between; }
+  .site-header.active {
+    background: #eeeeee;
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-bottom: thin solid rgba(0, 0, 0, 0.1);
+    transition: all .3s ease; }
 
 .site-nav {
   display: flex;
-  align-content: flex-end; }
+  align-content: center;
+  margin: 0 auto; }
+  @media (min-width: 321px) {
+    .site-nav {
+      align-content: flex-end;
+      margin: initial; } }
   .site-nav__list {
     list-style: none;
-    display: flex; }
-  .site-nav__item {
-    padding: 1rem; }
+    display: flex;
+    padding: 0; }
+  .site-nav__link {
+    padding: 1rem;
+    color: #777777;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: block; }
+    .site-nav__link:hover {
+      transition: all 0.2s ease;
+      color: #444444; }
+      .site-nav__link:hover:after {
+        width: 100%;
+        background: #d2322d;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease; }
+    .site-nav__link:after {
+      content: '';
+      background: red;
+      display: block;
+      height: 1px;
+      width: 0;
+      -webkit-transition: all .5s ease;
+      transition: all .5s ease; }
 
 .site-footer {
   font-size: 0.88889rem;
@@ -494,25 +541,39 @@ ul, menu, dir {
   align-items: center;
   justify-items: center;
   text-align: center;
-  padding: 4rem 0; }
+  padding: 2rem 0; }
+  @media (min-width: 768px) {
+    .site-footer {
+      padding: 4rem 0; } }
   .site-footer__title {
     margin: 1rem 0;
     color: #eeeeee; }
   .site-footer__contact {
     list-style: none;
-    padding: 0;
-    margin-bottom: .5rem; }
+    padding: 0; }
   .site-footer__social {
     list-style: none;
     padding: 0; }
   .site-footer__social-ico {
     display: inline-block; }
+    .site-footer__social-ico svg {
+      color: white;
+      line-height: 1;
+      opacity: .65;
+      transition: all 0.2s ease;
+      padding: .5rem;
+      box-sizing: content-box;
+      display: block; }
+      .site-footer__social-ico svg:hover {
+        opacity: 1;
+        transition: all 0.2s ease; }
   .site-footer__copyright {
     font-size: 0.77778rem;
     color: #444444; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 figure {
   margin: 0; }

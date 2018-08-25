@@ -8,6 +8,19 @@
 //
 // ***************************************
 
+#hero-home {
+    position: relative;
+    background: none;
+}
+#hero-home canvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: $color-light;
+}
 .hero {
 	&__title--underline {
 		color: $color-primary;
@@ -20,7 +33,7 @@
 .about {
 	display: grid;
 	grid-column: 2/span 3;
-	padding: 2rem 0;
+	padding: 2rem 0 5rem;
 	grid-template-columns: 1fr;
 	grid-column-gap: 3rem;
 	@media (min-width: $screen-lg) {
@@ -32,6 +45,17 @@
 	}
 	&__title {
 		margin-top: 2rem;
+	}
+	&__summary {
+		text-align: center;
+		padding: 0 2rem 4rem;
+		border-bottom: thin solid rgba(0,0,0,.1);
+		margin-bottom: 1rem;
+		@media (min-width: $screen-lg) {
+			text-align: initial;
+			padding: 0;
+			border: none;
+		}
 	}
 	
 	.skills {
