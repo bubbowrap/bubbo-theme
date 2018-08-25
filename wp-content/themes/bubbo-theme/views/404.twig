@@ -1,5 +1,28 @@
 {% extends "base.twig" %}
 
+{% block styles %} {# append #}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ theme.link  }}/dist/css/404.css" type="text/css" media="screen" />
+{% endblock %}
+
+{% block hero %}
+    <section class="hero">
+    	<div class="grid container">
+			<div class="hero__block">
+				<div>
+					<h1 class="hero__title hero__title--underline">There's nothing here.</h1>
+					<h3 class="sub">Sorry, I guess.</h3>
+					<picture>
+						<source srcset="{{site.theme.path}}/src/img/404-shrug.webp" type="image/webp" alt="lady shruggin'">
+						<source srcset="{{site.theme.path}}/src/img/404-shruggie.jpg" type="image/jpeg" alt="old guy shruggin'"> 
+						<img src="{{site.theme.path}}/src/img/404-shruggie.jpg" alt="old guy shruggin'" />
+					</picture>
+				</div>
+				<br />
+				<a href="/" class="btn btn--secondary">Back to Homepage</a>
+			</div>
+    	</div>
+    </section>
+{% endblock %}
 {% block content %}
-	Sorry, we couldn't find what you're looking for.
 {% endblock %}

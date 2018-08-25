@@ -16,6 +16,7 @@
     text-decoration: none;
     border-radius: 5px;
     text-transform: uppercase;
+    transition: $animation-basic;
     @media (min-width: $screen-md) {
         font-size: rem(16);
         white-space: inherit;
@@ -25,6 +26,7 @@
     &.focus {
         text-decoration: none;
         background-color: lighten($color-dark, 10%);
+        transition: $animation-basic;
     }
 
     &:active,
@@ -41,12 +43,14 @@
         background-color: $color-secondary;
         &:hover {
             background-color: saturate($color-secondary, 20%);
+            color: white;
         }
     }
     &--secondary {
         background-color: $color-dark-gray;
         &:hover {
             background-color: darken($color-dark-gray, 20%);
+            color: white;
         }
     }
 }

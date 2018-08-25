@@ -6,8 +6,8 @@
     display: grid;
     grid-template-columns: 1rem 1fr 6fr 1fr 1rem;
     grid-template-rows: auto;
-    grid-gap: 1rem;
     @media (min-width: $screen-md) {
+        grid-gap: 1rem;
         grid-template-columns: 3rem 1fr 6fr 1fr 3rem;
     }
   }

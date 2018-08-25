@@ -2,7 +2,14 @@
 p {
     margin: 0 0 1rem;
 }
-
+a {
+    color: $color-secondary;
+    transition: $animation-basic;
+    &:hover {
+        color: saturate($color-secondary, 20%);
+        transition: $animation-basic;
+    }
+}
 //headings
 html {
     font-size: $font-size-base + px;

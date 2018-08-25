@@ -98,58 +98,14 @@
     display: block;
     font-weight: 100; }
 
-#hero-home {
-  position: relative;
-  background: none; }
+.hero__block {
+  padding: 1rem 0 2rem; }
 
-#hero-home canvas {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  background: #eeeeee; }
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: 5rem;
+    margin: 2rem 0 0; } }
 
-.hero__title--underline {
+.sub {
+  margin-bottom: 2rem;
   color: #777777; }
-
-.about {
-  display: grid;
-  grid-column: 2/span 3;
-  padding: 2rem 0 5rem;
-  grid-template-columns: 1fr;
-  grid-column-gap: 3rem; }
-  @media (min-width: 1024px) {
-    .about {
-      padding: 6rem 0;
-      grid-template-columns: 4fr 7fr; } }
-  @media (min-width: 1200px) {
-    .about {
-      grid-column-gap: 5rem; } }
-  .about__title {
-    margin-top: 2rem; }
-  .about__summary {
-    text-align: center;
-    padding: 0 2rem 4rem;
-    border-bottom: thin solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 1rem; }
-    @media (min-width: 1024px) {
-      .about__summary {
-        text-align: initial;
-        padding: 0;
-        border: none; } }
-  .about .skills {
-    display: grid;
-    grid-column-gap: 1rem; }
-    @media (min-width: 480px) {
-      .about .skills {
-        grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 768px) {
-      .about .skills {
-        grid-template-columns: repeat(3, 1fr); } }
-    .about .skills__list {
-      padding: 0 1rem;
-      font-size: 0.88889rem;
-      line-height: 1.75;
-      font-weight: 300; }

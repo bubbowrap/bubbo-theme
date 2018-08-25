@@ -1,0 +1,19 @@
+@import "base/variables";
+@import "partials/hero";
+@import "partials/portfolio-grid";
+
+.hero {
+	&__block {
+		padding: 1rem 0 2rem;
+	}
+	&__title {
+		@media (min-width: $screen-lg) {
+			font-size: 5rem;
+			margin: 2rem 0 0;
+		}
+	}
+}
+.sub {
+	margin-bottom: 2rem;
+	color: $color-primary;
+}
