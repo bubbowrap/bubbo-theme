@@ -231,6 +231,34 @@ https://flickity.metafizzy.co
     .hero__category {
       font-size: 1.11111rem; } }
 
+.project-shots__media {
+  grid-column: 2/span 3;
+  text-align: center; }
+  @media (min-width: 1024px) {
+    .project-shots__media {
+      grid-column: 2/span 3; } }
+
+.carousel-cell {
+  width: 100%;
+  /* full width */
+  /*height: 160px;  height of carousel */
+  margin-right: 10px;
+  text-align: center; }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 1.38889rem;
+  height: 0; }
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .project-info {
   display: grid;
   padding: 2rem 0;
@@ -258,16 +286,18 @@ https://flickity.metafizzy.co
 .project-specs__content {
   margin: 0; }
 
-@media (min-width: 1024px) {
-  .project-details__title {
-    margin-top: 0;
-    line-height: inherit; } }
+.project-details__title {
+  margin-top: 0; }
+  @media (min-width: 1024px) {
+    .project-details__title {
+      margin-top: 0;
+      line-height: inherit; } }
 
 .page-nav {
   grid-column: 2/span 3;
   text-align: center;
   padding: 4rem 0;
-  border-top: thin solid rgba(0,0,0,.1); }
+  border-top: thin solid #777777; }
   @media (min-width: 1024px) {
     .page-nav {
       padding: 6rem 0; } }
