@@ -1,5 +1,7 @@
 $('.main-carousel').flickity({
     // options
-    cellAlign: 'left',
-    contain: true
+    wrapAround: true,
+    imagesLoaded: true,
+    contain: true,
+    accessibility: true
   });

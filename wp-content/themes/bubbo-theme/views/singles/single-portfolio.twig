@@ -1,5 +1,8 @@
 {% extends "base.twig" %}
 
+{% set slider_toggle = post.get_field('slider_toggle') %}
+{% set video_toggle = post.get_field('video_toggle') %}
+
 {% block styles %} {# append #}
     {{ parent() }}
     <link rel="stylesheet" href="{{ theme.link  }}/dist/css/single-portfolio.css" type="text/css" media="screen" />
@@ -14,7 +17,13 @@
 					<p class="hero__category">{{post.terms('portfolio-category') | join(', ') }}</p>
 				</div>
 				<div>
-					<a href="http://{{post.site_address}}" class="btn btn--secondary">Visit Site</a>
+					<a href="http://{{post.site_address}}" class="btn btn--secondary">
+					{% if video_toggle %}
+						Watch on Vimeo
+					{% else %}
+						Visit Site
+					{% endif %}
+					</a>
 				</div>
 			</div>
     	</div>
@@ -22,6 +31,7 @@
 {% endblock %}
 
 {% block media %}
+{% if slider_toggle %}
 {% set slider = post.get_field('slider_images') %}
 	<section class="project-shots">
 		<div class="main-carousel">
@@ -30,6 +40,19 @@
 			{% endfor %}
 		</div>
 	</section>
+	{% endif %}
+
+{% if video_toggle %}
+	<section class="project-shots">
+		<div class="grid container">
+			<div class="project-shots__media">
+				<div class="video-wrapper">
+					{{ post.embed_code }}
+				</div>
+			</div>
+		</div>
+	</section>	
+{% endif %}
 {% endblock %}
 
 {% block content %}
