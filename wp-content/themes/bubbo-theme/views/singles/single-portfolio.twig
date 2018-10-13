@@ -17,6 +17,7 @@
 					<p class="hero__category">{{post.terms('portfolio-category') | join(', ') }}</p>
 				</div>
 				<div>
+				{% if post.site_address %}
 					<a href="http://{{post.site_address}}" class="btn btn--secondary">
 					{% if video_toggle %}
 						Watch on Vimeo
@@ -24,6 +25,7 @@
 						Visit Site
 					{% endif %}
 					</a>
+				{% endif %}
 				</div>
 			</div>
     	</div>
@@ -104,6 +106,6 @@
 
 {% block page_scripts %}
     {{ parent() }}
-	<script type="text/javascript" src="{{site.theme.path}}/src/js/lib/flickity.pkgd.min.js"></script>
-	<script type="text/javascript" src="{{site.theme.path}}/src/js/single-portfolio.js"></script>
+	<script type="text/javascript" src="{{site.theme.path}}/dist/js/lib/flickity.pkgd.min.js"></script>
+	<script type="text/javascript" src="{{site.theme.path}}/dist/js/single-portfolio.js"></script>
 {% endblock %}
