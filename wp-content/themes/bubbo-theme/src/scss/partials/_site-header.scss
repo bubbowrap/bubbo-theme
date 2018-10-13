@@ -5,17 +5,18 @@
 // ***************************************
 
 .site-header {
-    transition: all .3s ease;
+    background: $color-light;
+    transition: $animation-basic;
     &__logo {
-        width: rem(70);
+        width: rem(50);
         padding: rem(5);
         opacity: .8;
-        display: none;
         &:hover {
             opacity: 1;
         }
-        @media (min-width: $screen-xs) {
+        @media (min-width: $screen-sm) {
             display: block;
+            width: rem(70);
         }
     }
     .container {
@@ -31,13 +32,14 @@
         right: 0;
         z-index: 1;
         border-bottom: thin solid rgba(0,0,0,.1);
-        transition: all .3s ease;
+        transition: $animation-basic;
     }
 }
   
   .site-nav {
       display: flex;
       align-content: center;
+      align-items: center;
       margin: 0 auto;
       @media (min-width: $screen-xs) {
         align-content: flex-end;
@@ -49,11 +51,14 @@
           padding: 0;
       }
       &__link {
-          padding: 1rem;
+          padding: .75rem;
           color: $color-primary;
           transition: $animation-basic;
           text-decoration: none;
           display: block;
+          @media (min-width: $screen-sm) {
+            padding: 1rem;
+          }
           &:hover {
             transition: $animation-basic;
             color: $color-dark-gray;

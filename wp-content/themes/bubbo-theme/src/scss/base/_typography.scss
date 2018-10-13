@@ -2,6 +2,7 @@
 p {
     margin: 0 0 1rem;
 }
+
 a {
     color: $color-secondary;
     transition: $animation-basic;
@@ -12,17 +13,19 @@ a {
 }
 //headings
 html {
-    font-size: $font-size-base + px;
     line-height: $line-height + em;
     font-family: $font-family-primary;
     color: $color-primary;
     font-weight: $font-normal;
     -webkit-font-smoothing: antialiased;
+    @media (min-width: $screen-md) {
+        font-size: $font-size-base + px;
+    }
 }
 
 h1 { 
     color: $color-dark-gray;
-    font-size: $h1-font-size / .5;
+    font-size: calc(#{$h1-font-size} / 1.5);
     line-height: 1;
     font-weight: $font-normal;
     @media (min-width: $screen-md) {
@@ -31,7 +34,7 @@ h1 {
 }
 h2 {
     color: $color-dark-gray;
-    font-size: $h2-font-size / .5;
+    font-size: calc(#{$h2-font-size} / 1.5);
     margin-top: 4rem;
     margin-bottom: 2rem;
     font-weight: $font-normal;
@@ -42,7 +45,7 @@ h2 {
 }
 h3 {
     color: $color-dark-gray;
-    font-size: $h3-font-size / .5;
+    font-size: calc(#{$h3-font-size} / 1.25);
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: $font-normal;

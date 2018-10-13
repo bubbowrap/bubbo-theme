@@ -23,18 +23,9 @@
 
 	<div class="grid container">
 		{% block content %}
-		<section id="content" role="main" class="content-wrapper">
 			{% if title %}
 				<h1>{{title}}</h1>
 			{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				Sorry, no content {% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-				{% endif %}
-			</div>
-		</section>
 		{% endblock %}
 	</div>
 
@@ -44,16 +35,13 @@
 		{% include 'footers/footer.twig' %} 
 		{{ function('wp_footer') }} 
 		{% block page_scripts %}
-			<script
-	src="https://code.jquery.com/jquery-1.12.4.min.js"
-	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-	crossorigin="anonymous"></script>
-			<script type="text/javascript" src="{{site.theme.path}}/src/js/global.js"></script>
+			<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+			<script type="text/javascript" src="{{site.theme.path}}/dist/js/lib/jquery.scrollTo.js"></script>
+			<script type="text/javascript" src="{{site.theme.path}}/dist/js/global.js"></script>
 		{% endblock %}
 		{% block fonts %}
 			<link href="https://fonts.googleapis.com/css?family=Palanquin:300,400,700" rel="stylesheet">
 		{% endblock %}
-
 	{% endblock %}
 </body>
 

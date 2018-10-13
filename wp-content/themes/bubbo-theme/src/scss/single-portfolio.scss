@@ -47,6 +47,7 @@
 // ***************************************
 
 .project-shots {
+	padding-bottom: 2rem;
 	&__media {
 		grid-column:2/span 3;
 		text-align: center;
@@ -99,6 +100,11 @@
 }
 
 .project-specs {
+	@media (min-width: $screen-lg) {
+		position: sticky;
+		height: fit-content;
+		top: 12vh;
+	}
 	&__item {
 		margin-bottom: 2rem;
 	}
