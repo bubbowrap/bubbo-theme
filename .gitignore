@@ -34,6 +34,7 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/*
 wp-content/plugins/*
+wp-content/mu-plugins/*
 wp-content/wp-cache-config.php
 wp-content/w3tc-config
 wp-content/themes/twentyseventeen/
