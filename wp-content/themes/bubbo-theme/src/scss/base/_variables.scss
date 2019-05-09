@@ -15,7 +15,7 @@ $font-family-primary: 'Palanquin', Arial, sans-serif;
     @return ($px/$font-size-base) + rem;
 }
 
-$font-size-base: 18;
+$font-size-base: 20;
 $font-size-xl: ($font-size-base * 2);
 $font-size-lg: ($font-size-base * 1.25);
 $font-size-sm: ($font-size-base * .875);
@@ -31,15 +31,15 @@ $font-normal: 400;
 $font-bold: 700;
 
 $h1-font-size: rem(55);
-$h1-font-size: rem(55);
-$h2-font-size: rem(40);
+$h2-font-size: rem(45);
 $h3-font-size: rem(28);
 $h4-font-size: rem(20);
 $line-height-heading: 1.25;
 
 //Animations
 
-$animation-basic: all .2s ease;
+$animation-basic: all .5s;
+$animation-ease-in: all .2s ease-in;
 $animation-in-out: all .2s ease-in-out;
 //mq
 

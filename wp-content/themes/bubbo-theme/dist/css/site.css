@@ -361,7 +361,7 @@ th {
   display: inline-block;
   padding: .75rem 1rem;
   font-weight: 700;
-  font-size: 0.77778rem;
+  font-size: 0.7rem;
   color: white;
   line-height: 1rem;
   text-align: center;
@@ -375,15 +375,15 @@ th {
   text-decoration: none;
   border-radius: 5px;
   text-transform: uppercase;
-  transition: all 0.2s ease; }
+  transition: all 0.5s; }
   @media (min-width: 768px) {
     .btn {
-      font-size: 0.88889rem;
+      font-size: 0.8rem;
       white-space: inherit; } }
   .btn:hover, .btn:focus, .btn.focus {
     text-decoration: none;
     background-color: #343434;
-    transition: all 0.2s ease; }
+    transition: all 0.5s; }
   .btn:active, .btn.active {
     outline: 0; }
   .btn[disabled] {
@@ -405,10 +405,10 @@ p {
 
 a {
   color: #d2322d;
-  transition: all 0.2s ease; }
+  transition: all 0.5s; }
   a:hover {
     color: #ec1a14;
-    transition: all 0.2s ease; }
+    transition: all 0.5s; }
 
 html {
   line-height: 1.5em;
@@ -418,37 +418,37 @@ html {
   -webkit-font-smoothing: antialiased; }
   @media (min-width: 768px) {
     html {
-      font-size: 18px; } }
+      font-size: 20px; } }
 
 h1 {
   color: #444444;
-  font-size: calc(3.05556rem / 1.5);
+  font-size: calc(2.75rem / 1.5);
   line-height: 1;
-  font-weight: 400; }
+  font-weight: 700; }
   @media (min-width: 768px) {
     h1 {
-      font-size: 3.05556rem; } }
+      font-size: 2.75rem; } }
 
 h2 {
   color: #444444;
-  font-size: calc(2.22222rem / 1.5);
+  font-size: calc(2.25rem / 1.5);
   margin-top: 4rem;
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.1em; }
   @media (min-width: 768px) {
     h2 {
-      font-size: 2.22222rem; } }
+      font-size: 2.25rem; } }
 
 h3 {
   color: #444444;
-  font-size: calc(1.55556rem / 1.25);
+  font-size: calc(1.4rem / 1.25);
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: 400; }
   @media (min-width: 768px) {
     h3 {
-      font-size: 1.55556rem; } }
+      font-size: 1.4rem; } }
 
 h4 {
   color: #444444;
@@ -462,7 +462,7 @@ ul, menu, dir {
   color: #d2322d; }
 
 .container {
-  max-width: 72.22222rem;
+  max-width: 65rem;
   margin: 0 auto; }
 
 .grid {
@@ -476,17 +476,20 @@ ul, menu, dir {
 
 .site-header {
   background: #fafafa;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease-in-out;
+  border-bottom: thin solid rgba(0, 0, 0, 0); }
   .site-header__logo {
-    width: 2.77778rem;
-    padding: 0.27778rem;
+    width: 2.5rem;
+    padding: 0.25rem;
     opacity: .8; }
     .site-header__logo:hover {
       opacity: 1; }
     @media (min-width: 480px) {
       .site-header__logo {
         display: block;
-        width: 3.88889rem; } }
+        width: 3.5rem; } }
+    .active .site-header__logo {
+      transform: scale(0.95); }
   .site-header .container {
     grid-column: 1/-1;
     display: flex;
@@ -494,12 +497,12 @@ ul, menu, dir {
   .site-header.active {
     background: #fafafa;
     top: 0;
-    position: fixed;
+    position: sticky;
     left: 0;
     right: 0;
     z-index: 1;
     border-bottom: thin solid rgba(0, 0, 0, 0.1);
-    transition: all 0.2s ease; }
+    transition: all 0.5s; }
 
 .site-nav {
   display: flex;
@@ -517,31 +520,29 @@ ul, menu, dir {
   .site-nav__link {
     padding: .75rem;
     color: #777777;
-    transition: all 0.2s ease;
+    transition: all 0.5s;
     text-decoration: none;
     display: block; }
     @media (min-width: 480px) {
       .site-nav__link {
         padding: 1rem; } }
     .site-nav__link:hover {
-      transition: all 0.2s ease;
+      transition: all 0.5s;
       color: #444444; }
       .site-nav__link:hover:after {
         width: 100%;
         background: #d2322d;
-        -webkit-transition: all .5s ease;
-        transition: all .5s ease; }
+        transition: all 0.5s; }
     .site-nav__link:after {
       content: '';
       background: red;
       display: block;
       height: 1px;
       width: 0;
-      -webkit-transition: all .5s ease;
-      transition: all .5s ease; }
+      transition: all 0.5s; }
 
 .site-footer {
-  font-size: 0.88889rem;
+  font-size: 0.8rem;
   color: #fafafa;
   background: #1a1a1a;
   grid-column: 1/-1;
@@ -567,15 +568,15 @@ ul, menu, dir {
       color: white;
       line-height: 1;
       opacity: .65;
-      transition: all 0.2s ease;
+      transition: all 0.5s;
       padding: .5rem;
       box-sizing: content-box;
       display: block; }
       .site-footer__social-ico svg:hover {
         opacity: 1;
-        transition: all 0.2s ease; }
+        transition: all 0.5s; }
   .site-footer__copyright {
-    font-size: 0.77778rem;
+    font-size: 0.7rem;
     color: #444444; }
 
 img {

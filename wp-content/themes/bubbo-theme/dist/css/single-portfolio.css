@@ -11,24 +11,24 @@
   font-weight: 400; }
   @media (min-width: 768px) {
     .hero__intro {
-      font-size: 1.11111rem;
+      font-size: 1rem;
       line-height: 1.75; } }
 
-@media (min-width: 480px) {
-  .hero__title {
-    font-size: 5vw; } }
-
-@media (min-width: 1024px) {
-  .hero__title {
-    font-size: 3.05556rem; } }
-
-.hero__title--underline:after {
-  content: '';
-  display: block;
-  height: 0.27778rem;
-  margin: 1rem auto;
-  width: 5rem;
-  background: #d2322d; }
+.hero__title {
+  font-weight: 400; }
+  @media (min-width: 480px) {
+    .hero__title {
+      font-size: 5vw; } }
+  @media (min-width: 1024px) {
+    .hero__title {
+      font-size: 2.75rem; } }
+  .hero__title--underline:after {
+    content: '';
+    display: block;
+    height: 0.25rem;
+    margin: 1rem auto;
+    width: 5rem;
+    background: #d2322d; }
 
 .hero__subtitle {
   font-size: 2rem;
@@ -41,7 +41,7 @@
       font-size: 6vw; } }
   @media (min-width: 1024px) {
     .hero__subtitle {
-      font-size: 3.9rem; } }
+      font-size: 3.5rem; } }
 
 .portfolio {
   grid-column: 2/span 3; }
@@ -57,7 +57,7 @@
         grid-template-columns: 1fr 1fr; } }
   .portfolio__item {
     justify-self: center;
-    background: rgba(255, 12, 12, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     position: relative; }
     .portfolio__item > figure {
       display: flex;
@@ -65,20 +65,19 @@
       align-items: center;
       overflow: hidden;
       margin: 0;
-      -webkit-transition: .2s ease-in-out;
-      transition: .2s ease-in-out; }
+      transition: all 0.5s; }
       .portfolio__item > figure:hover .portfolio__title {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
-        transition: .2s ease-in-out; }
+        transition: all 0.5s; }
       .portfolio__item > figure:hover .portfolio__img {
         opacity: .2;
         transform: scale(1.05);
-        transition: .2s ease-in-out; }
+        transition: all 0.5s; }
   .portfolio__img {
     display: block;
     opacity: 1;
-    transition: .2s ease-in-out; }
+    transition: all 0.5s; }
   .portfolio__title {
     font-size: 1.5rem;
     color: white;
@@ -88,7 +87,7 @@
     top: 50%;
     opacity: 0;
     transform: translate(-50%, -50%) scale(1.05);
-    transition: .2s ease-in-out;
+    transition: all 0.5s;
     width: 100%; }
     @media (min-width: 480px) {
       .portfolio__title {
@@ -220,16 +219,16 @@ https://flickity.metafizzy.co
 .hero__category {
   text-transform: uppercase;
   color: #777777;
-  letter-spacing: 0.05556rem;
+  letter-spacing: 0.05rem;
   font-weight: 700;
-  font-size: 0.88889rem;
+  font-size: 0.8rem;
   padding: .25rem; }
   @media (min-width: 768px) {
     .hero__category {
       font-size: 2vw; } }
   @media (min-width: 1024px) {
     .hero__category {
-      font-size: 1.11111rem; } }
+      font-size: 1rem; } }
 
 .project-shots {
   padding-bottom: 2rem; }
@@ -251,7 +250,7 @@ https://flickity.metafizzy.co
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
-  padding-top: 1.38889rem;
+  padding-top: 1.25rem;
   height: 0; }
 
 .video-wrapper iframe {
@@ -289,7 +288,7 @@ https://flickity.metafizzy.co
   margin: 0;
   font-weight: 700;
   display: inline-block;
-  letter-spacing: 0.05556rem; }
+  letter-spacing: 0.05rem; }
 
 .project-specs__content {
   margin: 0; }
