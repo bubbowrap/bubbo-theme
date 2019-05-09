@@ -19,9 +19,9 @@
             display: block;
             width: rem(70);
         }
-        .active & {
-            transform: scale(.95);
-        }
+        // .active & {
+        //     transform: scale(.95);
+        // }
     }
     .container {
         grid-column: 1/-1;
@@ -35,7 +35,7 @@
         left: 0;
         right: 0;
         z-index: 1;
-        border-bottom: thin solid rgba(0,0,0,.1);
+        border-bottom: thin solid rgba(0,0,0,.05);
         transition: $animation-basic;
     }
 }

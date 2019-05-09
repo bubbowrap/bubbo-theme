@@ -488,8 +488,6 @@ ul, menu, dir {
       .site-header__logo {
         display: block;
         width: 3.5rem; } }
-    .active .site-header__logo {
-      transform: scale(0.95); }
   .site-header .container {
     grid-column: 1/-1;
     display: flex;
@@ -501,7 +499,7 @@ ul, menu, dir {
     left: 0;
     right: 0;
     z-index: 1;
-    border-bottom: thin solid rgba(0, 0, 0, 0.1);
+    border-bottom: thin solid rgba(0, 0, 0, 0.05);
     transition: all 0.5s; }
 
 .site-nav {
