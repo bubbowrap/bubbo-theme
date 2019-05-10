@@ -14,7 +14,7 @@
       }
     &__item {
       justify-self: center;
-          background: rgba(255, 12, 12, 0.8);
+          background: rgba(0, 0, 0, 0.8);
           position: relative;
           & > figure {
               display: flex;
@@ -22,18 +22,17 @@
               align-items: center;
               overflow: hidden;
               margin: 0;           
-              -webkit-transition: .2s ease-in-out;
-              transition: .2s ease-in-out;
+              transition: $animation-basic;
               &:hover {
                   .portfolio__title {
                       opacity: 1;
                       transform: translate(-50%,-50%) scale(1);
-                      transition: .2s ease-in-out;
+                      transition: $animation-basic;
                   }
                   .portfolio__img {
                       opacity: .2;
                       transform: scale(1.05);
-                      transition: .2s ease-in-out;
+                      transition: $animation-basic;
                   }
               }
           }
@@ -41,7 +40,7 @@
       &__img {		
           display: block;
           opacity: 1;
-          transition: .2s ease-in-out;
+          transition: $animation-basic;
       }
       &__title {
           font-size: 1.5rem;
@@ -52,7 +51,7 @@
           top: 50%;
           opacity: 0;
           transform: translate(-50%,-50%) scale(1.05);
-          transition: .2s ease-in-out;  
+          transition: $animation-basic;  
           width: 100%;
           @media (min-width: $screen-sm) {
             font-size: 2rem;
