@@ -37,6 +37,6 @@ gulp.task('minify-css', function() {
 });
 
 //builds everything
-gulp.task('build', ['minify-css', 'minify-js'], function() {
+gulp.task('build', gulp.series('minify-css', 'minify-js', function() {
     console.log('Building and...all done!');
-});
+}));
