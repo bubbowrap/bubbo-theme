@@ -1,19 +1,19 @@
-# bubbo-theme
+# bubbo-theme (2018)
 
 ## About
 Bubbowrap 2018 theme, built with Wordpress/Twig/ACF. Wanted to build a lightweight theme completely from scratch and also make my site easier to update/reskin in the future.
 
 ## Stack
 
-Built with:
+### Built with:
 
-[wordpress](https://wordpress.org/)
-[npm](https://docs.npmjs.com/cli/install)
-[twig] (https://twig.symfony.com/)
-[Gulp](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
+- [wordpress](https://wordpress.org/)
+- [npm](https://docs.npmjs.com/cli/install)
+- [twig](https://twig.symfony.com)
+- [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/API.md)
 
 
-## Cmds
+## Basic Commands
 
 ### NPM
  - `npm install` Install global assets/packages.
