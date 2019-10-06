@@ -15,6 +15,7 @@ a {
 html {
     line-height: $line-height + em;
     font-family: $font-family-primary;
+    font-display: auto;
     color: $color-primary;
     font-weight: $font-normal;
     -webkit-font-smoothing: antialiased;
