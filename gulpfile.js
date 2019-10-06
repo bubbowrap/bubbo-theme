@@ -13,7 +13,7 @@ gulp.task('sass', function() {
 
 //compile on save
 gulp.task('watch', function() {
-    gulp.watch('wp-content/themes/bubbo-theme/src/scss/**/*.scss', ['sass']);
+    gulp.watch('wp-content/themes/bubbo-theme/src/scss/**/*.scss', gulp.series('sass'));
 });
 
 

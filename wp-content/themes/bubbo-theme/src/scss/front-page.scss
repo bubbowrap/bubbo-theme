@@ -31,7 +31,7 @@
 		}
 	}
 	&__title--underline {
-		color: $color-primary;
+		//color: $color-primary;
 	}
 }
 // ***************************************
@@ -45,7 +45,7 @@
 	grid-template-columns: 1fr;
 	grid-column-gap: 3rem;
 	@media (min-width: $screen-lg) {
-		padding: 6rem 0;
+		padding: 4rem 0 6rem;
 		grid-template-columns:4fr 7fr;
 	}
 	@media (min-width: $screen-xl) {
@@ -53,6 +53,8 @@
 	}
 	&__title {
 		margin-top: 2rem;
+		margin-bottom: 1rem;
+		font-size: 1.85rem;
 	}
 	&__summary {
 		text-align: center;
@@ -77,6 +79,9 @@
 		}
 		@media (min-width: $screen-md) {
 			grid-template-columns: repeat(3, 1fr);
+		}
+		h3 {
+			font-size: 1.2rem;
 		}
 		&__list {
 			padding: 0 1rem;
