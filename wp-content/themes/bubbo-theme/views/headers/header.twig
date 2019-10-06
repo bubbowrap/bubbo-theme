@@ -7,7 +7,7 @@
             <ul class="site-nav__list">
                 {% for item in menu.get_items %} 
                     <li class="site-nav__item">
-                        <a href="{{item.get_link}}" class="site-nav__link">{{item.title}}</a>
+                        <a href="{{item.link}}" class="site-nav__link" aria-label="{{item.description}}">{{item.title}}</a>
                     </li>
                 {% endfor %}                
             </ul>
