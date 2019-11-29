@@ -1,7 +1,17 @@
 {% extends "base.twig" %}
-{% block hero %}{% endblock %}
-{% block media %}
+{% block hero %}
+    <section class="hero">
+    	<div class="grid container">
+        <div class="hero__block">
+            <h1>{{post.post_title}}</h1>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
+
 {% block content %}
+    <div class="c-wysiwyg">
+        {{post.content}}
+    </div>
 {% endblock %}

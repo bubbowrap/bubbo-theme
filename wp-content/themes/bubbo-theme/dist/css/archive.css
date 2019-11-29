@@ -102,6 +102,15 @@
     display: block;
     font-weight: 100; }
 
+.post-block {
+  grid-column: 3/span 1;
+  padding: 2rem 0;
+  text-decoration: none;
+  border-bottom: thin solid rgba(0, 0, 0, 0.2);
+  color: #737373; }
+  .post-block h1 {
+    font-size: 1.5rem; }
+
 .hero__block {
   padding: 1rem 0 4rem; }
 

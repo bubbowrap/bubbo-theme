@@ -1,0 +1,11 @@
+.post-block {
+    grid-column: 3/span 1;
+    padding: 2rem 0;
+    text-decoration: none;
+    border-bottom: thin solid rgba(0,0,0,.2);
+    color: $color-primary;
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

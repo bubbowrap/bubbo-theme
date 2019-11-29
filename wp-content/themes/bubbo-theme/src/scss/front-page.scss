@@ -1,5 +1,4 @@
 @import "base/variables";
-@import "partials/hero";
 @import "partials/portfolio-grid";
 
 // ***************************************
@@ -30,6 +29,17 @@
 			font-size: 1.5rem;
 		}
 	}
+
+    &__block {
+		grid-column: 2 / 5;
+		padding: 3rem 0;
+		text-align: center;
+			@media (min-width: $screen-xl) {
+				padding: 2rem 0 6rem;
+				grid-column: 3 / 4;
+			}
+		}
+
 	&__title--underline {
 		//color: $color-primary;
 	}

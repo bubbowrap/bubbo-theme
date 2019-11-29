@@ -101,25 +101,3 @@
     font-size: 1rem;
     display: block;
     font-weight: 100; }
-
-.hero__block {
-  padding: 1rem 0 4rem; }
-
-@media (min-width: 1024px) {
-  .hero__title {
-    font-size: 5rem;
-    margin: 2rem 0 0; } }
-
-.sub {
-  color: #737373;
-  margin: 1rem 0; }
-  @media (min-width: 768px) {
-    .sub {
-      margin-bottom: 2rem; } }
-
-picture {
-  display: block;
-  padding: 1rem 0; }
-  @media (min-width: 768px) {
-    picture {
-      padding: 2rem 0; } }

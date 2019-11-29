@@ -1,0 +1,28 @@
+{% extends "base.twig" %}
+
+{% block styles %} {# append #}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ theme.link }}/dist/css/archive.css" type="text/css" media="screen" />
+{% endblock %}
+
+{% block hero %}
+    <section class="hero">
+    			<div class="grid container">
+        <div class="hero__block">
+                    {% for category in categories %}
+        <a href="{{category.link}}">{{category.name}}</a>
+    {% endfor %}
+            <h1>{{ title }}</h1>
+
+    </div>
+    </div>
+    </section>
+
+
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        {% include 'components/blocks/post-block.twig' %}
+    {% endfor %}
+{% endblock %}

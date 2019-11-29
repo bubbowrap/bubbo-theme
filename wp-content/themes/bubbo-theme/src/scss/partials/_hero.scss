@@ -1,12 +1,20 @@
 .hero {
     &__block {
-	grid-column: 2 / 5;
-    text-align: center;
-	padding: 3rem 0;
-        @media (min-width: $screen-xl) {
-            padding: 2rem 0 6rem;
-            grid-column: 3 / 4;
+		grid-column: 2/span 3;
+        padding: 2rem 0;
+        text-align: center;
+
+        @media (min-width: $screen-md) {
+            text-align: inherit;
         }
+        
+		.hero--portfolio & {
+			display: grid;
+			align-items: center;
+			@media (min-width: $screen-md) {
+				grid-template-columns: 10fr auto;
+			}
+		}
     }
     &__intro {
         font-weight: $font-normal;
